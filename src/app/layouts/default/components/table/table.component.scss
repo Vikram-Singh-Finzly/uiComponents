@@ -1,0 +1,26 @@
+button {
+  margin: 16px 8px;
+}
+/* 
+.demo-table {
+  width: 100%;
+} */
+
+/* .mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+} */
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+//box-shadow: 0px 1px 5px -3px;
+.fin-table {
+  box-shadow: 0px 1px 5px -3px;
+  width: 100%;
+}
+.fin-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}

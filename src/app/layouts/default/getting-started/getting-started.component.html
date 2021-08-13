@@ -1,0 +1,71 @@
+<div class="fin-row">
+    <div class="fin-col-1"></div>
+
+    <div class="fin-col-8 fin-text">
+
+        <div class="fin-app-title fin-mt-2 fin-mb-3" id="div1">
+            Introduction
+        </div>
+        Finzly CSS is a self service responsive CSS framework. It is open and freely available to all projects within
+        Finzly.
+        Developers and designers can take only the parts of the framework needed for a project.
+        It is compatible with Angular Material.
+        <div class=" fin-mt-3">
+            Developers can dynamically download CSS and Font in browser from S3 Bucket. Use below style sheet link in
+            index.html head tag.
+        </div>
+
+
+        <div class="fin-app-title fin-mt-2 fin-mb-3" id="div2">
+            Link Of Style Sheet
+        </div>
+        <div class=" fin-mt-3">
+            <pre><code [highlight]="link"  ></code></pre>
+        </div>
+
+
+
+        <div class="fin-app-title fin-mt-2 fin-mb-3" id="div3">
+            Install Angular Material
+        </div>
+        Use the Angular CLI's installation schematic to set up your Angular Material project by running the following
+        command:
+        <div class=" fin-mt-3">
+            <pre><code [highlight]="installLink"  ></code></pre>
+        </div>
+        <div class=" fin-mt-3">
+            Make Sure style is imported in angular.json file.
+        </div>
+        <div class=" fin-mt-3">
+            <pre><code [highlight]="angularjsoncode"  ></code></pre>
+        </div>
+
+        <div class="fin-app-title fin-mt-2 fin-mb-3" id="div4">
+            Import Module
+        </div>
+        To use any mat module, developer needs to import it in module file. for ex: to use matTable import as shown
+        below
+        <div class=" fin-mt-3  fin-mb-3">
+            <pre><code [highlight]="impoetmattablemodule"  ></code></pre>
+        </div>
+
+
+
+
+    </div>
+    <div class="fin-col-1"></div>
+
+    <div class="fin-col-2 wrapper" style="position:fixed; right:50px;">
+        <ul class="StepProgress">
+            <li class="StepProgress-item" [ngxScrollTo]="'#div1'" (click)="hightligth('div1')" [ngClass]="{
+             'list-item-active':selectedLink === 'div1'}">Getting Started</li>
+            <li class="StepProgress-item  is-done" [ngxScrollTo]="'#div2'" (click)="hightligth('div2')" [ngClass]="{
+                'list-item-active':selectedLink === 'div2'}">Link Of Style Sheet</li>
+            <li class="StepProgress-item" [ngxScrollTo]="'#div3'" (click)="hightligth('div3')" [ngClass]="{
+                'list-item-active':selectedLink === 'div3'}">Install Angular Material</li>
+            <li class="StepProgress-item" [ngxScrollTo]="'#div4'" (click)="hightligth('div4')" [ngClass]="{
+                    'list-item-active':selectedLink === 'div4'}">Import Module</li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,123 @@
+<div class="fin-row">
+  <div class="fin-col-1"></div>
+
+  <div class="fin-col-8 fin-text">
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div1">
+      Introduction
+    </div>
+    The <span class="codeprint">.fin-table</span> provides a Material Design styled data-table that can be used to
+    display rows of data.
+    This table builds on the foundation of the mat-table and uses a similar interface for its data.
+    <div class=" fin-mt-3">
+      Import <span class="codeprint">MatTableModule</span> in modules file as mentioned in get started.
+    </div>
+
+    <div class=" fin-mt-3">
+      A detailed look at how the table is implemented, see the details below.
+    </div>
+
+
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div2">
+      Dynamic Table
+    </div>
+    <div class=" fin-mt-3">
+      <table mat-table [dataSource]="data" class="fin-table">
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns">
+          <th mat-header-cell *matHeaderCellDef> {{column | titlecase}} </th>
+          <td mat-cell class="fin-cell" *matCellDef="let element"> {{element[column]}} </td>
+        </ng-container>
+      </table>
+    </div>
+    <div class=" fin-mt-3">
+      Html code for dynamic table shown below:
+    </div>
+    <div class=" fin-mt-3">
+      <pre><code [highlight]="tableHtmlCode"  ></code></pre>
+    </div>
+    <div class=" fin-mt-3">
+      Typescript Code for dynamic table shown below:
+    </div>
+    <div class=" fin-mt-3">
+      <pre><code [highlight]="tabletsCode"  ></code></pre>
+    </div>
+
+
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div3">
+      Dynamic Table With Action Button
+    </div>
+    <div class=" fin-mt-3">
+      <table mat-table [dataSource]="data2" class="fin-table">
+        <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+        <ng-container [matColumnDef]="column" *ngFor="let column of displayedColumns2">
+          <th mat-header-cell *matHeaderCellDef> {{column | titlecase}} </th>
+          <td mat-cell class="fin-cell" *matCellDef="let element"> {{element[column]}}
+            <span *ngIf="column==='Action'">
+              <mat-icon style="color: red;">delete</mat-icon>
+              <mat-icon>edit</mat-icon>
+            </span>
+          </td>
+        </ng-container>
+      </table>
+    </div>
+    <div class=" fin-mt-3">
+      To add action column developer just need to add action field in displayedColumns. In Html just need to
+      add span with action button.
+    </div>
+    <div class=" fin-mt-3">
+      Change in Html code for Dynamic Table With Action Button shown below:
+    </div>
+    <div class=" fin-mt-3">
+      <pre><code [highlight]="changeinhtmlCodeActionbutton"  ></code></pre>
+    </div>
+    <div class=" fin-mt-3">
+      Change in typescript Code for Dynamic Table With Action Button shown below:
+    </div>
+    <div class=" fin-mt-3 fin-mb-3">
+      <pre><code [highlight]="changeintscodeActionButton"  ></code></pre>
+    </div>
+
+
+    <!--     <div class="fin-app-title fin-mt-2 fin-mb-3" id="div4">
+      Dynamic Table With Scroll
+    </div>
+
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div5">
+      Dynamic Table With Sorting
+    </div>
+
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div6">
+      Dynamic Table With Pagination
+    </div>
+
+    <div class="fin-app-title fin-mt-2 fin-mb-3" id="div7">
+      Dynamic Table With Filter
+    </div> -->
+
+
+  </div>
+  <div class="fin-col-1"></div>
+
+  <div class="fin-col-2 wrapper" style="position:fixed; right:50px;">
+    <ul class="StepProgress">
+      <li class="StepProgress-item" [ngxScrollTo]="'#div1'" (click)="hightligth('div1')" [ngClass]="{
+             'list-item-active':selectedLink === 'div1'}">Introduction</li>
+      <li class="StepProgress-item  is-done" [ngxScrollTo]="'#div2'" (click)="hightligth('div2')" [ngClass]="{
+                'list-item-active':selectedLink === 'div2'}">Dynamic Table</li>
+      <li class="StepProgress-item" [ngxScrollTo]="'#div3'" (click)="hightligth('div3')" [ngClass]="{
+                'list-item-active':selectedLink === 'div3'}">Dynamic Table With Action Button</li>
+
+      <li class="StepProgress-item" [ngxScrollTo]="'#div4'" (click)="hightligth('div4')" [ngClass]="{
+                'list-item-active':selectedLink === 'div4'}">Dynamic Table With Scroll</li>
+      <li class="StepProgress-item  is-done" [ngxScrollTo]="'#div5'" (click)="hightligth('div5')" [ngClass]="{
+                     'list-item-active':selectedLink === 'div5'}">Dynamic Table With Sorting</li>
+      <li class="StepProgress-item" [ngxScrollTo]="'#div6'" (click)="hightligth('div6')" [ngClass]="{
+                     'list-item-active':selectedLink === 'div6'}">Dynamic Table With Pagination</li>
+      <li class="StepProgress-item" [ngxScrollTo]="'#div7'" (click)="hightligth('div7')" [ngClass]="{
+                      'list-item-active':selectedLink === 'div7'}">Dynamic Table With Filter</li>
+    </ul>
+  </div>
+
+</div>
